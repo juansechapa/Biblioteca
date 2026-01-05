@@ -6,13 +6,14 @@
 <head runat="server">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <link href="Content/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="css/estilos.css" rel="stylesheet" />
 
     <title></title>
 </head>
 <body>
     <form id="form1" runat="server">
         <div class="container">
-            <div class="row justify-content-around">
+            <div class="row justify-content-between">
                 <div class="col-md-4"></div>
                 <asp:Button ID="bntInicarSecion" runat="server" Text="Iniciar sesion" CssClass="btn btn-primary" OnClick="bntInicarSesion_Click" />
                 <asp:Button ID="btnRegistrarse" runat="server" Text="Registrarse" CssClass="btn btn-primary" OnClick="btnRegistrarse_Click" />
