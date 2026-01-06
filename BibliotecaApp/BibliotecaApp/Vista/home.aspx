@@ -30,6 +30,16 @@
                 </div>
             </div>
         </asp:Panel>
+
+        <%-- Panel de libros --%>
+        <asp:Panel ID="pnlLibros" runat="server">
+            <div class=" container libros">
+                <div class="row justify-content-center">
+
+                </div>
+            </div>
+        </asp:Panel>
+
         <%-- Panel del perfil del usuario --%>
         <asp:Panel ID="pnlPerfil" runat="server">
             <div class="container">
