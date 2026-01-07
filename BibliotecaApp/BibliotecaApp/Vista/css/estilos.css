@@ -1,12 +1,12 @@
-﻿body {
+﻿/*body {
     margin:0;
     padding:0;
     font-family:monserrat;
     background:linear-gradient(150deg)
     
-}
+}*/
 /*Estilos botones login y registro*/
-.BoxbtnLogin {
+/*.BoxbtnLogin {
     background-color: #f8f9fa;
     padding: 20px 0;
     text-align:end;
@@ -19,11 +19,11 @@
 
     .BoxLogin .btn {
         margin-left: 10px;
-    }
+    }*/
 
 
 /*Estilo login*/
-.BoxLogin1 {
+/*.BoxLogin1 {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -36,15 +36,15 @@
         text-align:center;
         padding:0 0 20px 0;
         border-bottom: 1px solid silver;
-    }
+    }*/
 
 
 
 /*Estilos del registro*/
-.BoxRegistro {
+/*.BoxRegistro {
     text-align: center;
 }
     .BoxRegistro{
 
-    }
+    }*/
     

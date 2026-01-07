@@ -3,11 +3,39 @@
   "WorkspaceRootPath": "C:\\Users\\Juan\\Documents\\BiblioGit\\BibliotecaApp\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{9FD4F750-97E0-45C2-A613-59C7B6A74A71}|BibliotecaApp\\BibliotecaApp.csproj|c:\\users\\juan\\documents\\bibliogit\\bibliotecaapp\\bibliotecaapp\\vista\\menu.master||{B30AFBFF-D992-43B7-B62D-2642580A2883}",
+      "RelativeMoniker": "D:0:0:{9FD4F750-97E0-45C2-A613-59C7B6A74A71}|BibliotecaApp\\BibliotecaApp.csproj|solutionrelative:bibliotecaapp\\vista\\menu.master||{B30AFBFF-D992-43B7-B62D-2642580A2883}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9FD4F750-97E0-45C2-A613-59C7B6A74A71}|BibliotecaApp\\BibliotecaApp.csproj|c:\\users\\juan\\documents\\bibliogit\\bibliotecaapp\\bibliotecaapp\\vista\\principal.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "RelativeMoniker": "D:0:0:{9FD4F750-97E0-45C2-A613-59C7B6A74A71}|BibliotecaApp\\BibliotecaApp.csproj|solutionrelative:bibliotecaapp\\vista\\principal.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9FD4F750-97E0-45C2-A613-59C7B6A74A71}|BibliotecaApp\\BibliotecaApp.csproj|c:\\users\\juan\\documents\\bibliogit\\bibliotecaapp\\bibliotecaapp\\vista\\principal.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9FD4F750-97E0-45C2-A613-59C7B6A74A71}|BibliotecaApp\\BibliotecaApp.csproj|solutionrelative:bibliotecaapp\\vista\\principal.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9FD4F750-97E0-45C2-A613-59C7B6A74A71}|BibliotecaApp\\BibliotecaApp.csproj|c:\\users\\juan\\documents\\bibliogit\\bibliotecaapp\\bibliotecaapp\\vista\\menu.master.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9FD4F750-97E0-45C2-A613-59C7B6A74A71}|BibliotecaApp\\BibliotecaApp.csproj|solutionrelative:bibliotecaapp\\vista\\menu.master.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9FD4F750-97E0-45C2-A613-59C7B6A74A71}|BibliotecaApp\\BibliotecaApp.csproj|c:\\users\\juan\\documents\\bibliogit\\bibliotecaapp\\bibliotecaapp\\vista\\home.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9FD4F750-97E0-45C2-A613-59C7B6A74A71}|BibliotecaApp\\BibliotecaApp.csproj|solutionrelative:bibliotecaapp\\vista\\home.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9FD4F750-97E0-45C2-A613-59C7B6A74A71}|BibliotecaApp\\BibliotecaApp.csproj|C:\\Users\\Juan\\Documents\\BiblioGit\\BibliotecaApp\\bibliotecaapp\\vista\\home.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "RelativeMoniker": "D:0:0:{9FD4F750-97E0-45C2-A613-59C7B6A74A71}|BibliotecaApp\\BibliotecaApp.csproj|solutionrelative:bibliotecaapp\\vista\\home.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9FD4F750-97E0-45C2-A613-59C7B6A74A71}|BibliotecaApp\\BibliotecaApp.csproj|c:\\users\\juan\\documents\\bibliogit\\bibliotecaapp\\bibliotecaapp\\vista\\login.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9FD4F750-97E0-45C2-A613-59C7B6A74A71}|BibliotecaApp\\BibliotecaApp.csproj|solutionrelative:bibliotecaapp\\vista\\login.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{9FD4F750-97E0-45C2-A613-59C7B6A74A71}|BibliotecaApp\\BibliotecaApp.csproj|C:\\Users\\Juan\\Documents\\BiblioGit\\BibliotecaApp\\bibliotecaapp\\vista\\login.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
       "RelativeMoniker": "D:0:0:{9FD4F750-97E0-45C2-A613-59C7B6A74A71}|BibliotecaApp\\BibliotecaApp.csproj|solutionrelative:bibliotecaapp\\vista\\login.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9FD4F750-97E0-45C2-A613-59C7B6A74A71}|BibliotecaApp\\BibliotecaApp.csproj|c:\\users\\juan\\documents\\bibliogit\\bibliotecaapp\\bibliotecaapp\\vista\\css\\estilos.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "AbsoluteMoniker": "D:0:0:{9FD4F750-97E0-45C2-A613-59C7B6A74A71}|BibliotecaApp\\BibliotecaApp.csproj|C:\\Users\\Juan\\Documents\\BiblioGit\\BibliotecaApp\\bibliotecaapp\\vista\\css\\estilos.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
       "RelativeMoniker": "D:0:0:{9FD4F750-97E0-45C2-A613-59C7B6A74A71}|BibliotecaApp\\BibliotecaApp.csproj|solutionrelative:bibliotecaapp\\vista\\css\\estilos.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
     }
   ],
@@ -18,7 +46,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Bookmark",
@@ -26,7 +54,98 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Menu.Master.cs",
+              "DocumentMoniker": "C:\\Users\\Juan\\Documents\\BiblioGit\\BibliotecaApp\\BibliotecaApp\\Vista\\Menu.Master.cs",
+              "RelativeDocumentMoniker": "BibliotecaApp\\Vista\\Menu.Master.cs",
+              "ToolTip": "C:\\Users\\Juan\\Documents\\BiblioGit\\BibliotecaApp\\BibliotecaApp\\Vista\\Menu.Master.cs",
+              "RelativeToolTip": "BibliotecaApp\\Vista\\Menu.Master.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-07T00:27:09.921Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Principal.aspx.cs",
+              "DocumentMoniker": "C:\\Users\\Juan\\Documents\\BiblioGit\\BibliotecaApp\\BibliotecaApp\\Vista\\Principal.aspx.cs",
+              "RelativeDocumentMoniker": "BibliotecaApp\\Vista\\Principal.aspx.cs",
+              "ToolTip": "C:\\Users\\Juan\\Documents\\BiblioGit\\BibliotecaApp\\BibliotecaApp\\Vista\\Principal.aspx.cs",
+              "RelativeToolTip": "BibliotecaApp\\Vista\\Principal.aspx.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAcwA0AAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-07T00:25:06.473Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Principal.aspx",
+              "DocumentMoniker": "C:\\Users\\Juan\\Documents\\BiblioGit\\BibliotecaApp\\BibliotecaApp\\Vista\\Principal.aspx",
+              "RelativeDocumentMoniker": "BibliotecaApp\\Vista\\Principal.aspx",
+              "ToolTip": "C:\\Users\\Juan\\Documents\\BiblioGit\\BibliotecaApp\\BibliotecaApp\\Vista\\Principal.aspx",
+              "RelativeToolTip": "BibliotecaApp\\Vista\\Principal.aspx",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
+              "WhenOpened": "2026-01-07T00:18:24.901Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "Menu.Master",
+              "DocumentMoniker": "C:\\Users\\Juan\\Documents\\BiblioGit\\BibliotecaApp\\BibliotecaApp\\Vista\\Menu.Master",
+              "RelativeDocumentMoniker": "BibliotecaApp\\Vista\\Menu.Master",
+              "ToolTip": "C:\\Users\\Juan\\Documents\\BiblioGit\\BibliotecaApp\\BibliotecaApp\\Vista\\Menu.Master",
+              "RelativeToolTip": "BibliotecaApp\\Vista\\Menu.Master",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
+              "WhenOpened": "2026-01-07T00:15:53.079Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Login.aspx.cs",
+              "DocumentMoniker": "C:\\Users\\Juan\\Documents\\BiblioGit\\BibliotecaApp\\BibliotecaApp\\Vista\\Login.aspx.cs",
+              "RelativeDocumentMoniker": "BibliotecaApp\\Vista\\Login.aspx.cs",
+              "ToolTip": "C:\\Users\\Juan\\Documents\\BiblioGit\\BibliotecaApp\\BibliotecaApp\\Vista\\Login.aspx.cs",
+              "RelativeToolTip": "BibliotecaApp\\Vista\\Login.aspx.cs",
+              "ViewState": "AgIAABUAAAAAAAAAAAA1wB8AAAAuAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-07T00:08:41.954Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "home.aspx.cs",
+              "DocumentMoniker": "C:\\Users\\Juan\\Documents\\BiblioGit\\BibliotecaApp\\BibliotecaApp\\Vista\\home.aspx.cs",
+              "RelativeDocumentMoniker": "BibliotecaApp\\Vista\\home.aspx.cs",
+              "ToolTip": "C:\\Users\\Juan\\Documents\\BiblioGit\\BibliotecaApp\\BibliotecaApp\\Vista\\home.aspx.cs",
+              "RelativeToolTip": "BibliotecaApp\\Vista\\home.aspx.cs",
+              "ViewState": "AgIAABAAAAAAAAAAAAAQwBkAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-06T18:50:23.042Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "home.aspx",
+              "DocumentMoniker": "C:\\Users\\Juan\\Documents\\BiblioGit\\BibliotecaApp\\BibliotecaApp\\Vista\\home.aspx",
+              "RelativeDocumentMoniker": "BibliotecaApp\\Vista\\home.aspx",
+              "ToolTip": "C:\\Users\\Juan\\Documents\\BiblioGit\\BibliotecaApp\\BibliotecaApp\\Vista\\home.aspx",
+              "RelativeToolTip": "BibliotecaApp\\Vista\\home.aspx",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
+              "WhenOpened": "2026-01-06T18:41:27.305Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
               "Title": "Login.aspx",
               "DocumentMoniker": "C:\\Users\\Juan\\Documents\\BiblioGit\\BibliotecaApp\\BibliotecaApp\\Vista\\Login.aspx",
               "RelativeDocumentMoniker": "BibliotecaApp\\Vista\\Login.aspx",
@@ -34,18 +153,18 @@
               "RelativeToolTip": "BibliotecaApp\\Vista\\Login.aspx",
               "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
-              "WhenOpened": "2026-01-02T23:36:29.408Z",
+              "WhenOpened": "2026-01-06T18:41:26.68Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 8,
               "Title": "estilos.css",
               "DocumentMoniker": "C:\\Users\\Juan\\Documents\\BiblioGit\\BibliotecaApp\\BibliotecaApp\\Vista\\css\\estilos.css",
               "RelativeDocumentMoniker": "BibliotecaApp\\Vista\\css\\estilos.css",
               "ToolTip": "C:\\Users\\Juan\\Documents\\BiblioGit\\BibliotecaApp\\BibliotecaApp\\Vista\\css\\estilos.css",
               "RelativeToolTip": "BibliotecaApp\\Vista\\css\\estilos.css",
-              "ViewState": "AgIAABUAAAAAAAAAAAAAACQAAAAbAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAaAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
               "WhenOpened": "2026-01-05T21:27:29.731Z",
               "EditorCaption": ""

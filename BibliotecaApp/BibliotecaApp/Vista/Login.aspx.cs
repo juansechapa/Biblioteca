@@ -29,7 +29,7 @@ namespace BibliotecaApp.Vista
             if (usuario != null)
             {
                 Session["usuario"] = usuario;
-                Response.Redirect("home.aspx");
+                Response.Redirect("Menu.master");
             }
             else
             {

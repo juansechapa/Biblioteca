@@ -15,7 +15,7 @@
         <div class="container">
             <div class="row justify-content-around">
                 <asp:Button ID="btnBuscar" runat="server" Text="Buscar" CssClass="btn btn-primary" OnClick="btnBuscar_Click"/>
-                <asp:Button ID="btnVerLibros" runat="server" Text="Ver libros" CssClass="btn btn-primary" OnClick="btnVerLibros_Click" />
+                <asp:Button ID="btnVerLibros" runat="server" Text="Ver catalogo" CssClass="btn btn-primary" OnClick="btnVerLibros_Click" />
                 <asp:Button ID="btnPerfil" runat="server" Text="Perfil" CssClass="btn btn-primary" OnClick="btnPerfil_Click"/>
                 <asp:Button ID="btnCerrarSesion" runat="server" Text="Cerrar Sesion" CssClass="btn btn-primary" OnClick="btnCerrarSesion_Click"/>
             </div>
@@ -31,14 +31,7 @@
             </div>
         </asp:Panel>
 
-        <%-- Panel de libros --%>
-        <asp:Panel ID="pnlLibros" runat="server">
-            <div class=" container libros">
-                <div class="row justify-content-center">
-
-                </div>
-            </div>
-        </asp:Panel>
+        
 
         <%-- Panel del perfil del usuario --%>
         <asp:Panel ID="pnlPerfil" runat="server">
