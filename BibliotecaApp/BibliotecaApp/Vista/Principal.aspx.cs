@@ -11,7 +11,46 @@ namespace BibliotecaApp.Vista
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (Session["usuario"] == null)
+            {
+                Response.Redirect("Login.aspx");
+            }
+            else
+            {
+                //lblMensajee.Text = "Bienvenido";
+            }
+
+            if (!IsPostBack)
+            {
+                OcultarPaneles();
+
+                if (Session["VistaActiva"] != null) 
+                {
+                    string vista = Session["VistaActiva"].ToString();
+                    if (vista == "Buscar")
+                    {
+                        pnlBuscar.Visible = true;
+                    }
+                    else if (vista == "Perfil")
+                    {
+                        pnlPerfil.Visible = true;
+                    }
+                        
+                    
+                }
+            }
+            
             
         }
+        void OcultarPaneles()
+        {
+            pnlBuscar.Visible = false;
+            pnlPerfil.Visible = false;
+        }
+        protected void btnBusqueda_Click(object sender, EventArgs e)
+        {
+
+        }
+
     }
 }

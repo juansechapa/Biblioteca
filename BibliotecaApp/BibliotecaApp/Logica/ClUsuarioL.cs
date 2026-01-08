@@ -20,5 +20,11 @@ namespace BibliotecaApp.Logica
         {
             return usuarioD.Registrar(usuario);
         }
+
+        //Metodos de administrador
+        public ClUsuario validarLogin_Admin(string correo, string contraseña)
+        {
+            return usuarioD.LoginAdmin(correo, contraseña);
+        }
     }
 }

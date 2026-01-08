@@ -16,7 +16,7 @@ namespace BibliotecaApp.Datos
             ClUsuario objUsuario = null;
             // TODO: Encriptar contraseña (pendiente por seguridad)
 
-            SqlCommand cmd = new SqlCommand("SELECT idUsuario, nombres, apellidos, correo FROM usuario WHERE correo = @correo AND contraseña = @contraseña", cn.MtAbriConexion());
+            SqlCommand cmd = new SqlCommand("SELECT idUsuario, nombres, apellidos, correo, idRol FROM usuario WHERE correo = @correo AND contraseña = @contraseña and idRol = 1", cn.MtAbriConexion());
 
             cmd.Parameters.AddWithValue("@correo", correo);
             cmd.Parameters.AddWithValue("@contraseña", contraseña);
@@ -31,8 +31,10 @@ namespace BibliotecaApp.Datos
                     nombres = dr.GetString(1),
                     apellidos = dr.GetString(2),
                     correo = dr.GetString(3),
+                    idRol = dr.GetInt32(4),
                     
                 };
+                
             }
             dr.Close();
             cn.MtCerrarConexion();
@@ -53,6 +55,35 @@ namespace BibliotecaApp.Datos
             cn.MtCerrarConexion();
 
             return filas > 0;
+        }
+
+        //Metodos para registar unAdministrador
+        public ClUsuario LoginAdmin(string correo, string contraseña)
+        {
+            ClUsuario OjbAdmin = null;
+
+            SqlCommand cmdAdmin = new SqlCommand("select idUsuario, nombres, apellidos, telefono, correo, idRol from usuario where correo = @correo AND contraseña = @contraseña and idRol = 2 ", cn.MtAbriConexion());
+
+            cmdAdmin.Parameters.AddWithValue(@correo, correo);
+            cmdAdmin.Parameters.AddWithValue(@contraseña, contraseña);
+
+            SqlDataReader drA = cmdAdmin.ExecuteReader();
+
+            if (drA.Read())
+            {
+                OjbAdmin = new ClUsuario()
+                {
+                    idUsuario = drA.GetInt32(0),
+                    nombres = drA.GetString(1),
+                    apellidos = drA.GetString(2),
+                    telefono = drA.GetInt32(3),
+                    correo = drA.GetString(4),
+                    idRol = drA.GetInt32(5),
+                };
+            }
+            drA.Close();
+            cn.MtCerrarConexion();
+            return OjbAdmin;
         }
     }
 }

@@ -91,7 +91,6 @@
     <Content Include="Vista\bootstrap-5.3.8-dist\js\bootstrap.min.js" />
     <Content Include="Vista\css\estilos.css" />
     <Content Include="Vista\Login.aspx" />
-    <Content Include="Vista\home.aspx" />
     <Content Include="Vista\Principal.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
@@ -107,13 +106,6 @@
     </Compile>
     <Compile Include="Vista\Login.aspx.designer.cs">
       <DependentUpon>Login.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Vista\home.aspx.cs">
-      <DependentUpon>home.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Vista\home.aspx.designer.cs">
-      <DependentUpon>home.aspx</DependentUpon>
     </Compile>
     <Compile Include="Vista\Menu.Master.cs">
       <DependentUpon>Menu.Master</DependentUpon>

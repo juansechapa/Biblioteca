@@ -18,6 +18,7 @@
                     <div class="col-md-4">
                         <asp:Button ID="bntInicarSecion" runat="server" Text="Iniciar sesion" CssClass="btn btn-primary" OnClick="bntInicarSesion_Click" />
                         <asp:Button ID="btnRegistrarse" runat="server" Text="Registrarse" CssClass="btn btn-primary" OnClick="btnRegistrarse_Click" />
+                        <asp:Button ID="btnAdmin" runat="server" Text="Admin" CssClass="btn btn-primary" OnClick="btnAdmin_Click"/>
                     </div>
                 </div>
             </div>
@@ -55,6 +56,21 @@
                         </div>
                     </div>
                 </div>
+            </div>
+        </asp:Panel>
+
+        <%--Panel de inicio de administrador--%>
+        <asp:Panel ID="pnlAdmin" runat="server">
+            <div class="BoxAdmin">
+                <div class="container">
+                    <div class="row justify-content-center">
+                        <asp:TextBox ID="txtCorreoAdmin" runat="server" CssClass="form-control"></asp:TextBox>
+                        <asp:TextBox ID="txtContraseñaAdmin" runat="server" CssClass="form-control"></asp:TextBox>
+                        <asp:Button ID="btnIniciarAdmin" runat="server" Text="Iniciar Sesion" CssClass="btn btn-primary" OnClick="btnIniciarAdmin_Click"/>
+                    </div>
+
+                </div>
+
             </div>
         </asp:Panel>
 

@@ -15,6 +15,6 @@ namespace BibliotecaApp.Modelo
         public int telefono { get; set; }
         public string correo { get; set; }
         public string contraseña { get; set; }
-        public string  rol {  get; set; }
+        public int idRol {  get; set; }
     }
 }

@@ -29,7 +29,7 @@ namespace BibliotecaApp.Vista
             if (usuario != null)
             {
                 Session["usuario"] = usuario;
-                Response.Redirect("Menu.master");
+                Response.Redirect("Principal.aspx");
             }
             else
             {
@@ -50,7 +50,7 @@ namespace BibliotecaApp.Vista
         }
         protected void btnVolver_Click(object sender, EventArgs e)
         {
-
+            Response.Redirect("Login.aspx");
         }
 
         protected void btnRegistrar_Click(object sender, EventArgs e)
@@ -86,6 +86,16 @@ namespace BibliotecaApp.Vista
                 pnlRegistro.Visible = true;
                 pnlLogin.Visible = false;
             }
+        }
+
+        protected void btnAdmin_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void btnIniciarAdmin_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

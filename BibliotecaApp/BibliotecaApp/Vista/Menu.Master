@@ -4,18 +4,29 @@
 
 <html>
 <head runat="server">
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title></title>
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
 </head>
 <body>
     <form id="form1" runat="server">
-        <div>
-            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
-                <h5>GONORREA</h5>
-            </asp:ContentPlaceHolder>
-        </div>
+
+        <nav class="navbar navbar-dark bg-dark">
+            <div class="container">
+                <asp:Button ID="btnBuscar" runat="server" Text="Buscar" CssClass="btn btn-primary" OnClick="btnBuscar_Click" />
+                <asp:Button ID="btnVerLibros" runat="server" Text="Ver catalogo" CssClass="btn btn-primary" OnClick="btnVerLibros_Click" />
+                <asp:Button ID="btnPerfil" runat="server" Text="Perfil" CssClass="btn btn-primary" OnClick="btnPerfil_Click" />
+                <asp:Button ID="btnCerrarSesion" runat="server" Text="Cerrar Sesion" CssClass="btn btn-primary" OnClick="btnCerrarSesion_Click" />
+            </div>
+        </nav>
+
+
+
+
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        </asp:ContentPlaceHolder>
+
     </form>
 </body>
 </html>
