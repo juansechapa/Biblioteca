@@ -65,8 +65,9 @@
                 <div class="container">
                     <div class="row justify-content-center">
                         <asp:TextBox ID="txtCorreoAdmin" runat="server" CssClass="form-control"></asp:TextBox>
-                        <asp:TextBox ID="txtContraseñaAdmin" runat="server" CssClass="form-control"></asp:TextBox>
+                        <asp:TextBox ID="txtContraseñaAdmin" runat="server" TextMode="Password" CssClass="form-control"></asp:TextBox>
                         <asp:Button ID="btnIniciarAdmin" runat="server" Text="Iniciar Sesion" CssClass="btn btn-primary" OnClick="btnIniciarAdmin_Click"/>
+                        <asp:Label ID="lblMensajeAd" runat="server" ></asp:Label>
                     </div>
 
                 </div>

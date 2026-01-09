@@ -57,15 +57,15 @@ namespace BibliotecaApp.Datos
             return filas > 0;
         }
 
-        //Metodos para registar unAdministrador
+        //Metodos del administradorAdministrador
         public ClUsuario LoginAdmin(string correo, string contraseña)
         {
             ClUsuario OjbAdmin = null;
 
             SqlCommand cmdAdmin = new SqlCommand("select idUsuario, nombres, apellidos, telefono, correo, idRol from usuario where correo = @correo AND contraseña = @contraseña and idRol = 2 ", cn.MtAbriConexion());
 
-            cmdAdmin.Parameters.AddWithValue(@correo, correo);
-            cmdAdmin.Parameters.AddWithValue(@contraseña, contraseña);
+            cmdAdmin.Parameters.AddWithValue("@correo", correo);
+            cmdAdmin.Parameters.AddWithValue("@contraseña", contraseña);
 
             SqlDataReader drA = cmdAdmin.ExecuteReader();
 

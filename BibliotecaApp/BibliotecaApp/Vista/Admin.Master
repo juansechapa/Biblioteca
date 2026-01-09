@@ -1,0 +1,27 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Admin.master.cs" Inherits="BibliotecaApp.Vista.Admin" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div>
+            <nav class="navbar navbar-dark bg-dark">
+                <asp:Button ID="btnVerUsuarios" runat="server" Text="Ver Usuarios" CssClass="btn btn-primary" OnClick="btnVerUsuarios_Click"/>
+                <asp:Button ID="btnOpcionesLibros" runat="server" Text="Ver Usuarios" CssClass="btn btn-primary" OnClick="btnOpcionesLibros_Click"/>
+                <asp:Button ID="btnCerrarSesionAd" runat="server" Text="Cerrar Sesion" CssClass="btn btn-primary" OnClick="btnCerrarSesionAd_Click"/>
+               <%-- <asp:Button ID="Button1" runat="server" Text="Button" />--%>
+            </nav>
+
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+    </form>
+</body>
+</html>

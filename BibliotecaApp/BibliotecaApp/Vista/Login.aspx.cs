@@ -16,6 +16,7 @@ namespace BibliotecaApp.Vista
         {
             pnlLogin.Visible = false;
             pnlRegistro.Visible = false;
+            pnlAdmin.Visible = false;
 
         }
         ClUsuarioL usuarioL = new ClUsuarioL();
@@ -90,12 +91,26 @@ namespace BibliotecaApp.Vista
 
         protected void btnAdmin_Click(object sender, EventArgs e)
         {
-
+            pnlAdmin.Visible = true;
         }
 
         protected void btnIniciarAdmin_Click(object sender, EventArgs e)
         {
+            string correoAd = txtCorreoAdmin.Text;
+            string contraseñaAd = txtContraseñaAdmin.Text;
 
+            ClUsuario Administrador = usuarioL.validarLogin_Admin(correoAd, contraseñaAd);
+
+            if (Administrador != null)
+            {
+                Session["Administrador"] = Administrador;
+                Response.Redirect("Menu_Admin.aspx");
+            }
+            else
+            {
+                lblMensajeAd.Text = "Correo o contraseña incorrectos";
+                pnlAdmin.Visible = true;
+            }
         }
     }
 }

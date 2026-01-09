@@ -33,6 +33,10 @@ namespace BibliotecaApp.Vista
             Session.Clear();
             Response.Redirect("Login.aspx");
         }
-        
+
+        protected void btnAgregar_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

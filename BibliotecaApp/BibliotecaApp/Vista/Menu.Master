@@ -15,6 +15,7 @@
         <nav class="navbar navbar-dark bg-dark">
             <div class="container">
                 <asp:Button ID="btnBuscar" runat="server" Text="Buscar" CssClass="btn btn-primary" OnClick="btnBuscar_Click" />
+                 <asp:Button ID="btnAgregar" runat="server" Text="Agregar libro" CssClass="btn btn-primary" OnClick="btnAgregar_Click" />
                 <asp:Button ID="btnVerLibros" runat="server" Text="Ver catalogo" CssClass="btn btn-primary" OnClick="btnVerLibros_Click" />
                 <asp:Button ID="btnPerfil" runat="server" Text="Perfil" CssClass="btn btn-primary" OnClick="btnPerfil_Click" />
                 <asp:Button ID="btnCerrarSesion" runat="server" Text="Cerrar Sesion" CssClass="btn btn-primary" OnClick="btnCerrarSesion_Click" />
