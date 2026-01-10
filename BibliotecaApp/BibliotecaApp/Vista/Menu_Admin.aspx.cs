@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BibliotecaApp.Modelo;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -30,7 +31,32 @@ namespace BibliotecaApp.Vista
                 string.IsNullOrEmpty(txtCategoria.Text))
             {
                 pnlAgregar.Visible = true;
+                return;
             }
+
+            int numeroSerie;
+            int numeroPaginas;
+            if (int.TryParse(txtNserie.Text, out numeroSerie))
+            {
+                lblMensaNumer.Text = "El número de serie debe ser numérico";
+                return;
+            }
+            if (int.TryParse(txtNpaginas.Text, out numeroPaginas))
+            {
+                lblMensaNumer.Text = "La cantidad de páginas debe ser numérica";
+            }
+
+
+                ClLibros libros = new ClLibros()
+            {
+                titulo = txtTitulo.Text,
+                autor = txtAutor.Text,
+                numeroDeSerie = numeroSerie,
+                cantidadDePaginas = numeroPaginas,
+                //idCategoria = txtCategoria.Text,
+                
+                
+            };
 
         }
     }

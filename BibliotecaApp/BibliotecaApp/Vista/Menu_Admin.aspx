@@ -11,6 +11,7 @@
                 <asp:TextBox ID="txtNpaginas" runat="server" CssClass="form-control"></asp:TextBox>
                 <asp:TextBox ID="txtCategoria" runat="server" CssClass="form-control"></asp:TextBox>
                 <asp:Button ID="btnAgeragrN" runat="server" Text="Agregar" CssClass="btn btn-primary" OnClick="btnAgeragrN_Click"/>
+                <asp:Label ID="lblMensaNumer" runat="server" ></asp:Label>
             </div>
         </div>
     </asp:Panel>
