@@ -14,9 +14,9 @@
         <div>
             <nav class="navbar navbar-dark bg-dark">
                 <asp:Button ID="btnVerUsuarios" runat="server" Text="Ver Usuarios" CssClass="btn btn-primary" OnClick="btnVerUsuarios_Click"/>
-                <asp:Button ID="btnOpcionesLibros" runat="server" Text="Ver Usuarios" CssClass="btn btn-primary" OnClick="btnOpcionesLibros_Click"/>
+                <asp:Button ID="btnOpcionesLibros" runat="server" Text="Ver" CssClass="btn btn-primary" OnClick="btnOpcionesLibros_Click"/>
                 <asp:Button ID="btnCerrarSesionAd" runat="server" Text="Cerrar Sesion" CssClass="btn btn-primary" OnClick="btnCerrarSesionAd_Click"/>
-               <%-- <asp:Button ID="Button1" runat="server" Text="Button" />--%>
+               
             </nav>
 
             <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">

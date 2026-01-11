@@ -20,7 +20,8 @@ namespace BibliotecaApp.Vista
         }
         protected void btnOpcionesLibros_Click(object sender, EventArgs e)
         {
-
+            Session["VistaLibros"] = "Opciones";
+            Response.Redirect("Menu_Admin.aspx");
         }
 
         protected void btnCerrarSesionAd_Click(object sender, EventArgs e)

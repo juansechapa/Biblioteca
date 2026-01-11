@@ -14,18 +14,38 @@ namespace BibliotecaApp.Vista
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            pnlAgregar.Visible = false;
+           if (!IsPostBack)
+            {
+                ocultar();
+                if (Session["VistaLibros"] != null)
+                {
+                    string opci = Session["VistaLibros"].ToString();
+                    if (opci == "Opciones")
+                    {
+                        pnlAgregar.Visible = true;
+                    }
+                }
+            }
         }
 
-        
+        void ocultar()
+        {
+            pnlAgregar.Visible = false;
+        }
+         
 
         protected void btnListar_Click(object sender, EventArgs e)
         {
 
         }
+        protected void btnAgregar_Click(object sender, EventArgs e)
+        {
+            pnlAgregar.Visible = true;
+        }
 
         protected void btnAgeragrN_Click(object sender, EventArgs e)
         {
+
             if(string.IsNullOrEmpty(txtTitulo.Text)||
                 string.IsNullOrEmpty(txtAutor.Text)||
                 string.IsNullOrEmpty(txtNserie.Text)||
@@ -55,10 +75,17 @@ namespace BibliotecaApp.Vista
                     cantidadDePaginas = numeroPaginas,
                     //idCategoria = txtCategoria.Text,
                 };
+            ClLibroL categoriaL = new ClLibroL();
             if (!IsPostBack)
             {
-                //ddlCategoria.DataSource = ClLibroL.
+                ddlCategoria.DataSource = categoriaL.ObtenerCategorias();
+                ddlCategoria.DataTextField = "categoria";
+                ddlCategoria.DataValueField = "idCategoria";
+                ddlCategoria.DataBind();
+
             }
         }
+
+        
     }
 }
