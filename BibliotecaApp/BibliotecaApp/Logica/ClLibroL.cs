@@ -18,5 +18,10 @@ namespace BibliotecaApp.Logica
 
             return libroD.libro_Nuevo(libro);
         }
+        
+        public List<ClCategoria> ObtenerCategorias()
+        {
+            return libroD.traer_categorias();
+        }
     }
 }

@@ -1,4 +1,6 @@
-﻿using BibliotecaApp.Modelo;
+﻿using BibliotecaApp.Datos;
+using BibliotecaApp.Logica;
+using BibliotecaApp.Modelo;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -45,19 +47,18 @@ namespace BibliotecaApp.Vista
             {
                 lblMensaNumer.Text = "La cantidad de páginas debe ser numérica";
             }
-
-
                 ClLibros libros = new ClLibros()
+                {
+                    titulo = txtTitulo.Text,
+                    autor = txtAutor.Text,  
+                    numeroDeSerie = numeroSerie,
+                    cantidadDePaginas = numeroPaginas,
+                    //idCategoria = txtCategoria.Text,
+                };
+            if (!IsPostBack)
             {
-                titulo = txtTitulo.Text,
-                autor = txtAutor.Text,
-                numeroDeSerie = numeroSerie,
-                cantidadDePaginas = numeroPaginas,
-                //idCategoria = txtCategoria.Text,
-                
-                
-            };
-
+                //ddlCategoria.DataSource = ClLibroL.
+            }
         }
     }
 }
