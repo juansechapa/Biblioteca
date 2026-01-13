@@ -12,6 +12,8 @@ namespace BibliotecaApp.Vista
 {
     public partial class Menu_Admin : System.Web.UI.Page
     {
+        ClLibroL categoriaL = new ClLibroL();
+
         protected void Page_Load(object sender, EventArgs e)
         {
            if (!IsPostBack)
@@ -25,6 +27,10 @@ namespace BibliotecaApp.Vista
                         pnlAgregar.Visible = true;
                     }
                 }
+                ddlCategoria.DataSource = categoriaL.ObtenerCategorias();
+                ddlCategoria.DataTextField = "categoria";
+                ddlCategoria.DataValueField = "idCategoria";
+                ddlCategoria.DataBind();
             }
         }
 
@@ -32,12 +38,13 @@ namespace BibliotecaApp.Vista
         {
             pnlAgregar.Visible = false;
         }
-         
+
 
         protected void btnListar_Click(object sender, EventArgs e)
         {
 
         }
+
         protected void btnAgregar_Click(object sender, EventArgs e)
         {
             pnlAgregar.Visible = true;
@@ -49,8 +56,7 @@ namespace BibliotecaApp.Vista
             if(string.IsNullOrEmpty(txtTitulo.Text)||
                 string.IsNullOrEmpty(txtAutor.Text)||
                 string.IsNullOrEmpty(txtNserie.Text)||
-                string.IsNullOrEmpty(txtNpaginas.Text)||
-                string.IsNullOrEmpty(txtCategoria.Text))
+                string.IsNullOrEmpty(txtNpaginas.Text))
             {
                 pnlAgregar.Visible = true;
                 return;
@@ -58,14 +64,15 @@ namespace BibliotecaApp.Vista
 
             int numeroSerie;
             int numeroPaginas;
-            if (int.TryParse(txtNserie.Text, out numeroSerie))
+            if (!int.TryParse(txtNserie.Text, out numeroSerie))
             {
                 lblMensaNumer.Text = "El número de serie debe ser numérico";
                 return;
             }
-            if (int.TryParse(txtNpaginas.Text, out numeroPaginas))
+            if (!int.TryParse(txtNpaginas.Text, out numeroPaginas))
             {
                 lblMensaNumer.Text = "La cantidad de páginas debe ser numérica";
+                return;
             }
                 ClLibros libros = new ClLibros()
                 {
@@ -73,19 +80,21 @@ namespace BibliotecaApp.Vista
                     autor = txtAutor.Text,  
                     numeroDeSerie = numeroSerie,
                     cantidadDePaginas = numeroPaginas,
-                    //idCategoria = txtCategoria.Text,
+                    idCategoria = int.Parse(ddlCategoria.SelectedValue)
                 };
-            ClLibroL categoriaL = new ClLibroL();
-            if (!IsPostBack)
+
+            ClLibroL libroL = new ClLibroL();
+            bool resultado = libroL.validar_liberoN(libros);
+
+            if (resultado)
             {
-                ddlCategoria.DataSource = categoriaL.ObtenerCategorias();
-                ddlCategoria.DataTextField = "categoria";
-                ddlCategoria.DataValueField = "idCategoria";
-                ddlCategoria.DataBind();
+                lblMensaNumer.Text = "Libro agregado correctamente";
 
             }
-        }
-
-        
+            else
+            {
+                lblMensaNumer.Text = "Error al agregar el libro";
+            }                     
+        }        
     }
 }

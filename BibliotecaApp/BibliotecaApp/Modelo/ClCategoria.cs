@@ -7,7 +7,7 @@ namespace BibliotecaApp.Modelo
 {
     public class ClCategoria
     {
-        public int idCtegoria {  get; set; }
+        public int idCategoria {  get; set; }
         public string categoria {  get; set; }
     }
 }

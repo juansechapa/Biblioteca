@@ -23,5 +23,10 @@ namespace BibliotecaApp.Logica
         {
             return libroD.traer_categorias();
         }
+
+        public List<ClLibros> ObtenerLibros()
+        {
+            return libroD.listar_libros();
+        }
     }
 }

@@ -24,13 +24,13 @@ namespace BibliotecaApp.Vista
         protected global::System.Web.UI.WebControls.Button btnAgregar;
 
         /// <summary>
-        /// Control Button2.
+        /// Control btnListar.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Button2;
+        protected global::System.Web.UI.WebControls.Button btnListar;
 
         /// <summary>
         /// Control pnlAgregar.
@@ -78,15 +78,6 @@ namespace BibliotecaApp.Vista
         protected global::System.Web.UI.WebControls.TextBox txtNpaginas;
 
         /// <summary>
-        /// Control txtCategoria.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtCategoria;
-
-        /// <summary>
         /// Control ddlCategoria.
         /// </summary>
         /// <remarks>
@@ -112,5 +103,14 @@ namespace BibliotecaApp.Vista
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lblMensaNumer;
+
+        /// <summary>
+        /// Control pnlListarLibros.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Panel pnlListarLibros;
     }
 }
