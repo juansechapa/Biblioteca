@@ -27,8 +27,23 @@
         </div>
     </asp:Panel>
 
-    <%-- panel para listar todos los libros --%>
+    <%-- Panel para listar todos los libros --%>
     <asp:Panel ID="pnlListarLibros" runat="server">
-
+        <asp:GridView ID="gvLibros" runat="server" AutoGenerateColumns="false" OnRowCommand="gvLibros_RowCommand">
+            <Columns>
+                <asp:BoundField DataField="idLibro" HeaderText="ID" />
+                <asp:BoundField DataField="titulo" HeaderText="Titulo" />
+                <asp:BoundField DataField="autor" HeaderText="Autor" />
+                <asp:BoundField DataField="numeroDeSerie" HeaderText="N.serie" />
+                <asp:BoundField DataField="cantidadDePaginas" HeaderText="Paginas" />
+                <asp:TemplateField HeaderText="Acciones">
+                    <ItemTemplate>
+                        <asp:Button ID="btnEditar" runat="server" Text="editar" CommandName="Editar" CommandArgument='<%#Eval("idLibro") %>'/>
+                        <asp:Button ID="btnEliminar" runat="server" Text="Eliminar" CommandName="Eliminar" CommandArgument='<%#Eval("idLibro") %>' />
+                    </ItemTemplate>
+                </asp:TemplateField>
+            </Columns>
+        </asp:GridView>
     </asp:Panel>
+
 </asp:Content>

@@ -103,7 +103,7 @@
     <Compile Include="Logica\ClUsuarioL.cs" />
     <Compile Include="Modelo\ClCategoria.cs" />
     <Compile Include="Modelo\ClUsuario.cs" />
-    <Compile Include="Modelo\ClLibros.cs" />
+    <Compile Include="Modelo\ClLibro.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Vista\Admin.Master.cs">
       <DependentUpon>Admin.Master</DependentUpon>

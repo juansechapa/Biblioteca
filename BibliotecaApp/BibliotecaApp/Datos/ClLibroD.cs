@@ -12,8 +12,8 @@ namespace BibliotecaApp.Datos
     public class ClLibroD
     {
         ClConexion lb = new ClConexion();
-        //metodo para traer agregar un libro nuevo
-        public bool libro_Nuevo(ClLibros libro)
+        //metodo para agregar un libro nuevo
+        public bool libro_Nuevo(ClLibro libro)
         {
             SqlCommand clb = new SqlCommand("insert into libros (titulo, autor, numeroDeSerie, cantidadDePaginas, idCategoria)" +
                 "values (@titulo, @autor, @numeroDeSerie, @cantidadDePaginas, @idCategoria)", lb.MtAbriConexion());
@@ -52,19 +52,19 @@ namespace BibliotecaApp.Datos
         }
 
         //Metodo para listar todos los libros
-        public List <ClLibros> listar_libros()
+        public List<ClLibro> listar_libros()
         {
-            List<ClLibros> listaLibros = new List<ClLibros>();
+            List<ClLibro> listaLibros = new List<ClLibro>();
 
-            SqlCommand cli = new SqlCommand("select * from libro",lb.MtAbriConexion());
+            SqlCommand cli = new SqlCommand("select * from libros", lb.MtAbriConexion());
 
             SqlDataReader lir = cli.ExecuteReader();
 
             while (lir.Read())
             {
-                listaLibros.Add(new ClLibros
+                listaLibros.Add(new ClLibro
                 {
-                    idLibro = Convert.ToInt32(lir["idLibros"]),
+                    idLibro = Convert.ToInt32(lir["idLibro"]),
                     titulo = Convert.ToString(lir["titulo"]),
                     autor = Convert.ToString(lir["autor"]),
                     numeroDeSerie = Convert.ToInt32(lir["numeroDeSerie"]),
@@ -75,6 +75,52 @@ namespace BibliotecaApp.Datos
             lir.Close();
             lb.MtCerrarConexion();
             return listaLibros;
+        }
+
+        //Metodo para editar un libro
+        public bool Editar_Libro(ClLibro libro)
+        {
+            SqlCommand add = new SqlCommand("update libro set titulo=@titulo, autor=@autor, numeroDeSerie=@numeroDeSerie, cantidadDePaginas=@cantidadDePaginas, idCategoria=@idCategoria where idLibro=@idLibro)", lb.MtAbriConexion());
+
+            add.Parameters.AddWithValue("@titulo", libro.titulo);
+            add.Parameters.AddWithValue("@autor", libro.autor);
+            add.Parameters.AddWithValue("@numeroDeSerie", libro.numeroDeSerie);
+            add.Parameters.AddWithValue("@cantidadDePaginas", libro.cantidadDePaginas);
+            add.Parameters.AddWithValue("@idCategoria", libro.idCategoria);
+            add.Parameters.AddWithValue("@idLibro", libro.idLibro);
+
+            int edi = add.ExecuteNonQuery();
+            lb.MtCerrarConexion();
+            return edi > 0;
+        }
+        //Metotodo para obtener libros por id
+        public ClLibro ObtenerLibroPorId(int idLibro)
+        {
+            ClLibro libro = null;
+
+            SqlCommand obi = new SqlCommand("select idLibro, titulo, autor, numeroDeSerie, cantidadDePaginas, idCategoria" + "from libro where idLibro = @idLibro", lb.MtAbriConexion());
+
+            obi.Parameters.AddWithValue("@idLibro", idLibro);
+
+            SqlDataReader dr = obi.ExecuteReader();
+
+            if (dr.Read())
+            {
+                libro = new ClLibro
+                {
+                    idLibro = Convert.ToInt32(dr["idLibro"]),
+                    titulo = dr["titulo"].ToString(),
+                    autor = dr["autor"].ToString(),
+                    numeroDeSerie = Convert.ToInt32(dr["numeroDeSerie"]),
+                    cantidadDePaginas = Convert.ToInt32(dr["cantidadDePaginas"]),
+                    idCategoria = Convert.ToInt32(dr["idCategoria"]),
+                };
+            }
+            dr.Close();
+            lb.MtCerrarConexion();
+            return libro;
+            
+        
         }
     }
 }   

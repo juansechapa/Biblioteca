@@ -13,6 +13,7 @@ namespace BibliotecaApp.Vista
     public partial class Menu_Admin : System.Web.UI.Page
     {
         ClLibroL categoriaL = new ClLibroL();
+        ClLibroL libroL = new ClLibroL();
 
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -37,12 +38,15 @@ namespace BibliotecaApp.Vista
         void ocultar()
         {
             pnlAgregar.Visible = false;
+            pnlListarLibros.Visible = false;
         }
 
 
         protected void btnListar_Click(object sender, EventArgs e)
         {
-
+            pnlListarLibros.Visible = true;
+            gvLibros.DataSource = libroL.ObtenerLibros();
+            gvLibros.DataBind();
         }
 
         protected void btnAgregar_Click(object sender, EventArgs e)
@@ -74,7 +78,7 @@ namespace BibliotecaApp.Vista
                 lblMensaNumer.Text = "La cantidad de páginas debe ser numérica";
                 return;
             }
-                ClLibros libros = new ClLibros()
+                ClLibro libros = new ClLibro()
                 {
                     titulo = txtTitulo.Text,
                     autor = txtAutor.Text,  
@@ -83,8 +87,8 @@ namespace BibliotecaApp.Vista
                     idCategoria = int.Parse(ddlCategoria.SelectedValue)
                 };
 
-            ClLibroL libroL = new ClLibroL();
-            bool resultado = libroL.validar_liberoN(libros);
+            
+            bool resultado = libroL.validar_libroN(libros);
 
             if (resultado)
             {
@@ -95,6 +99,38 @@ namespace BibliotecaApp.Vista
             {
                 lblMensaNumer.Text = "Error al agregar el libro";
             }                     
-        }        
+        }
+
+        void CargarLibro(int idLibro)
+        {
+            
+            ClLibro libro = libroL.ObtenerLibroPorId(idLibro);
+
+            if (libro != null)
+            {
+                txtTitulo.Text = libro.titulo;
+                txtAutor.Text = libro.autor;
+                txtNserie.Text = libro.numeroDeSerie.ToString();
+                txtNpaginas.Text = libro.cantidadDePaginas.ToString();
+                ddlCategoria.SelectedValue = libro.idCategoria.ToString();
+
+                ViewState["idLibro"] = idLibro;
+                pnlAgregar.Visible = true;  
+            }
+        }
+
+        protected void gvLibros_RowCommand(object sender, GridViewCommandEventArgs e)
+        {
+            int idLibro = Convert.ToInt32(e.CommandArgument);
+
+            if (e.CommandName == "Editar")
+            {
+                CargarLibro(idLibro);
+            }
+            else if (e.CommandName == "Eliminar")
+            {
+                //agregar void para eliminar libro con su capa de datos y modelo
+            }
+        }
     }
 }

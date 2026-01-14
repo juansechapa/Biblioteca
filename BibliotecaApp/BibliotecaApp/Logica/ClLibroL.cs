@@ -11,7 +11,7 @@ namespace BibliotecaApp.Logica
     {
         ClLibroD libroD = new ClLibroD();
 
-        public bool validar_liberoN(ClLibros libro)
+        public bool validar_libroN(ClLibro libro)
         {
             //if (string.IsNullOrEmpty(libro.titulo))
             //    return false;
@@ -24,9 +24,19 @@ namespace BibliotecaApp.Logica
             return libroD.traer_categorias();
         }
 
-        public List<ClLibros> ObtenerLibros()
+        public List<ClLibro> ObtenerLibros()
         {
             return libroD.listar_libros();
+        }
+
+        public bool validar_edit (ClLibro libro)
+        {
+            return libroD.Editar_Libro(libro);
+        }
+
+        public ClLibro ObtenerLibroPorId(int idLibro)
+        {
+            return libroD.ObtenerLibroPorId(idLibro);
         }
     }
 }

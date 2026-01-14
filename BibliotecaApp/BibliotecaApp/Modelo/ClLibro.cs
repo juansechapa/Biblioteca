@@ -5,7 +5,7 @@ using System.Web;
 
 namespace BibliotecaApp.Modelo
 {
-    public class ClLibros
+    public class ClLibro
     {
         public int idLibro { get; set; }
         public string titulo {  get; set; }
