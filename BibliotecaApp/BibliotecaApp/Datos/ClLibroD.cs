@@ -80,7 +80,7 @@ namespace BibliotecaApp.Datos
         //Metodo para editar un libro
         public bool Editar_Libro(ClLibro libro)
         {
-            SqlCommand add = new SqlCommand("update libro set titulo=@titulo, autor=@autor, numeroDeSerie=@numeroDeSerie, cantidadDePaginas=@cantidadDePaginas, idCategoria=@idCategoria where idLibro=@idLibro)", lb.MtAbriConexion());
+            SqlCommand add = new SqlCommand("update libros set titulo=@titulo, autor=@autor, numeroDeSerie=@numeroDeSerie, cantidadDePaginas=@cantidadDePaginas, idCategoria=@idCategoria where idLibro=@idLibro", lb.MtAbriConexion());
 
             add.Parameters.AddWithValue("@titulo", libro.titulo);
             add.Parameters.AddWithValue("@autor", libro.autor);
@@ -93,12 +93,25 @@ namespace BibliotecaApp.Datos
             lb.MtCerrarConexion();
             return edi > 0;
         }
+
+        //Metodo para eliminar libro
+        public bool Eliminar_Libro(ClLibro libro)
+        {
+            SqlCommand cmd = new SqlCommand("delete from libros where idLibro = @idLibro", lb.MtAbriConexion());
+
+            cmd.Parameters.AddWithValue("@idLibro", libro.idLibro);
+
+            int borrar = cmd.ExecuteNonQuery();
+            lb.MtCerrarConexion();
+            return borrar > 0;
+
+        }
         //Metotodo para obtener libros por id
         public ClLibro ObtenerLibroPorId(int idLibro)
         {
             ClLibro libro = null;
 
-            SqlCommand obi = new SqlCommand("select idLibro, titulo, autor, numeroDeSerie, cantidadDePaginas, idCategoria" + "from libro where idLibro = @idLibro", lb.MtAbriConexion());
+            SqlCommand obi = new SqlCommand("select idLibro, titulo, autor, numeroDeSerie, cantidadDePaginas, idCategoria from libros where idLibro =  @idLibro", lb.MtAbriConexion());
 
             obi.Parameters.AddWithValue("@idLibro", idLibro);
 
@@ -122,5 +135,7 @@ namespace BibliotecaApp.Datos
             
         
         }
+
+        
     }
 }   

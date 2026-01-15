@@ -38,5 +38,10 @@ namespace BibliotecaApp.Logica
         {
             return libroD.ObtenerLibroPorId(idLibro);
         }
+
+        public bool EliminarLibro(ClLibro idLibro)
+        {
+            return libroD.Eliminar_Libro(idLibro);
+        }
     }
 }

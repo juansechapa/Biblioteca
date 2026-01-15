@@ -57,7 +57,7 @@ namespace BibliotecaApp.Datos
             return filas > 0;
         }
 
-        //Metodos del administradorAdministrador
+        //Metodos del administrador
         public ClUsuario LoginAdmin(string correo, string contraseña)
         {
             ClUsuario OjbAdmin = null;

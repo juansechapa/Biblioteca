@@ -53,13 +53,18 @@ namespace BibliotecaApp.Vista
         {
             pnlAgregar.Visible = true;
         }
+        void ListarLibros()
+        {
+            gvLibros.DataSource = libroL.ObtenerLibros();
+            gvLibros.DataBind();
+        }
 
         protected void btnAgeragrN_Click(object sender, EventArgs e)
         {
 
-            if(string.IsNullOrEmpty(txtTitulo.Text)||
-                string.IsNullOrEmpty(txtAutor.Text)||
-                string.IsNullOrEmpty(txtNserie.Text)||
+            if (string.IsNullOrEmpty(txtTitulo.Text) ||
+                string.IsNullOrEmpty(txtAutor.Text) ||
+                string.IsNullOrEmpty(txtNserie.Text) ||
                 string.IsNullOrEmpty(txtNpaginas.Text))
             {
                 pnlAgregar.Visible = true;
@@ -78,22 +83,37 @@ namespace BibliotecaApp.Vista
                 lblMensaNumer.Text = "La cantidad de páginas debe ser numérica";
                 return;
             }
-                ClLibro libros = new ClLibro()
-                {
-                    titulo = txtTitulo.Text,
-                    autor = txtAutor.Text,  
-                    numeroDeSerie = numeroSerie,
-                    cantidadDePaginas = numeroPaginas,
-                    idCategoria = int.Parse(ddlCategoria.SelectedValue)
-                };
+            ClLibro libros = new ClLibro()
+            {
+                titulo = txtTitulo.Text,
+                autor = txtAutor.Text,
+                numeroDeSerie = numeroSerie,
+                cantidadDePaginas = numeroPaginas,
+                idCategoria = int.Parse(ddlCategoria.SelectedValue)
+            };
 
+            bool resultado;
+            if (ViewState[""] != null)
+            {
+
+            }
+
+            if (ViewState["idLibro"] != null)
+            {
+                libros.idLibro = (int)ViewState["idLibro"];
+                resultado = libroL.validar_edit(libros);
+                ViewState["idLibro"] = null;
+                btnAgeragrN.Text = "Guardar cambios";
+            }
+            else
+            {
+                resultado = libroL.validar_libroN(libros);
+            }
             
-            bool resultado = libroL.validar_libroN(libros);
-
             if (resultado)
             {
                 lblMensaNumer.Text = "Libro agregado correctamente";
-
+                ListarLibros();
             }
             else
             {
@@ -119,6 +139,15 @@ namespace BibliotecaApp.Vista
             }
         }
 
+        void EliminarLibro(ClLibro idLibro)
+        {
+            ClLibroL libroL= new ClLibroL();
+            libroL.EliminarLibro(idLibro);
+            ListarLibros();
+        }
+
+        
+
         protected void gvLibros_RowCommand(object sender, GridViewCommandEventArgs e)
         {
             int idLibro = Convert.ToInt32(e.CommandArgument);
@@ -129,7 +158,7 @@ namespace BibliotecaApp.Vista
             }
             else if (e.CommandName == "Eliminar")
             {
-                //agregar void para eliminar libro con su capa de datos y modelo
+                //agregar void para eliminar
             }
         }
     }
