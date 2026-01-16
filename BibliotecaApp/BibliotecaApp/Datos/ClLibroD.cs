@@ -95,11 +95,11 @@ namespace BibliotecaApp.Datos
         }
 
         //Metodo para eliminar libro
-        public bool Eliminar_Libro(ClLibro libro)
+        public bool Eliminar_Libro(int idLibro)
         {
             SqlCommand cmd = new SqlCommand("delete from libros where idLibro = @idLibro", lb.MtAbriConexion());
 
-            cmd.Parameters.AddWithValue("@idLibro", libro.idLibro);
+            cmd.Parameters.AddWithValue("@idLibro", idLibro);
 
             int borrar = cmd.ExecuteNonQuery();
             lb.MtCerrarConexion();

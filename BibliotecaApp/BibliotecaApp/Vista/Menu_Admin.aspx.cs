@@ -32,6 +32,14 @@ namespace BibliotecaApp.Vista
                 ddlCategoria.DataTextField = "categoria";
                 ddlCategoria.DataValueField = "idCategoria";
                 ddlCategoria.DataBind();
+                if (ViewState["idLibro"] != null)
+                {
+                    btnAgeragrN.Text = "Guardar cambiod";
+                }
+                else
+                {
+                    btnAgeragrN.Text = "Agregar libro";
+                }
             }
         }
 
@@ -40,7 +48,6 @@ namespace BibliotecaApp.Vista
             pnlAgregar.Visible = false;
             pnlListarLibros.Visible = false;
         }
-
 
         protected void btnListar_Click(object sender, EventArgs e)
         {
@@ -53,6 +60,7 @@ namespace BibliotecaApp.Vista
         {
             pnlAgregar.Visible = true;
         }
+
         void ListarLibros()
         {
             gvLibros.DataSource = libroL.ObtenerLibros();
@@ -61,7 +69,6 @@ namespace BibliotecaApp.Vista
 
         protected void btnAgeragrN_Click(object sender, EventArgs e)
         {
-
             if (string.IsNullOrEmpty(txtTitulo.Text) ||
                 string.IsNullOrEmpty(txtAutor.Text) ||
                 string.IsNullOrEmpty(txtNserie.Text) ||
@@ -73,16 +80,19 @@ namespace BibliotecaApp.Vista
 
             int numeroSerie;
             int numeroPaginas;
+
             if (!int.TryParse(txtNserie.Text, out numeroSerie))
             {
                 lblMensaNumer.Text = "El número de serie debe ser numérico";
                 return;
             }
+
             if (!int.TryParse(txtNpaginas.Text, out numeroPaginas))
             {
                 lblMensaNumer.Text = "La cantidad de páginas debe ser numérica";
                 return;
             }
+
             ClLibro libros = new ClLibro()
             {
                 titulo = txtTitulo.Text,
@@ -93,17 +103,11 @@ namespace BibliotecaApp.Vista
             };
 
             bool resultado;
-            if (ViewState[""] != null)
-            {
-
-            }
-
+            
             if (ViewState["idLibro"] != null)
             {
                 libros.idLibro = (int)ViewState["idLibro"];
-                resultado = libroL.validar_edit(libros);
-                ViewState["idLibro"] = null;
-                btnAgeragrN.Text = "Guardar cambios";
+                resultado = libroL.validar_edit(libros);               
             }
             else
             {
@@ -114,16 +118,19 @@ namespace BibliotecaApp.Vista
             {
                 lblMensaNumer.Text = "Libro agregado correctamente";
                 ListarLibros();
+
+                ViewState["idLibro"] = null;
+                btnAgeragrN.Text = "Agregar libro";
+                limpiarCapos();
             }
             else
             {
                 lblMensaNumer.Text = "Error al agregar el libro";
-            }                     
+            }  
         }
 
         void CargarLibro(int idLibro)
         {
-            
             ClLibro libro = libroL.ObtenerLibroPorId(idLibro);
 
             if (libro != null)
@@ -135,18 +142,11 @@ namespace BibliotecaApp.Vista
                 ddlCategoria.SelectedValue = libro.idCategoria.ToString();
 
                 ViewState["idLibro"] = idLibro;
+                btnAgeragrN.Text = "Guardar cambios";
                 pnlAgregar.Visible = true;  
             }
         }
 
-        void EliminarLibro(ClLibro idLibro)
-        {
-            ClLibroL libroL= new ClLibroL();
-            libroL.EliminarLibro(idLibro);
-            ListarLibros();
-        }
-
-        
 
         protected void gvLibros_RowCommand(object sender, GridViewCommandEventArgs e)
         {
@@ -158,8 +158,32 @@ namespace BibliotecaApp.Vista
             }
             else if (e.CommandName == "Eliminar")
             {
-                //agregar void para eliminar
+                bool eliminado = libroL.EliminarLibro(idLibro);
+
+                if (eliminado)
+                {
+                    lblMensaNumer.Text = "Libro eliminado correctamete";
+                }
+                else
+                {
+                    lblMensaNumer.Text = "Error al eliminar libro";
+                }
+                ListarLibros();
             }
+        }
+
+        void limpiarCapos()
+        {
+            txtTitulo.Text = "";
+            txtAutor.Text = "";
+            txtNserie.Text = "";
+            txtNpaginas.Text = "";
+            ddlCategoria.SelectedIndex = 0;
+        }
+        protected void btnCerrarP_Click(object sender, EventArgs e)
+        {
+            pnlAgregar.Visible=false;
+            limpiarCapos();
         }
     }
 }

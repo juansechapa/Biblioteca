@@ -21,7 +21,8 @@
                 <asp:TextBox ID="txtNserie" runat="server" CssClass="form-control"></asp:TextBox>
                 <asp:TextBox ID="txtNpaginas" runat="server" CssClass="form-control"></asp:TextBox>
                 <asp:DropDownList ID="ddlCategoria" runat="server"></asp:DropDownList>
-                <asp:Button ID="btnAgeragrN" runat="server" Text="Agregar libro" CssClass="btn btn-primary" OnClick="btnAgeragrN_Click" />
+                <asp:Button ID="btnAgeragrN" runat="server" CssClass="btn btn-primary" OnClick="btnAgeragrN_Click" />
+                <asp:Button ID="btnCerrarP" runat="server" Text="Cerrar" CssClass="btn btn-primary" OnClick="btnCerrarP_Click" />
                 <asp:Label ID="lblMensaNumer" runat="server"></asp:Label>
             </div>
         </div>
@@ -39,7 +40,7 @@
                 <asp:TemplateField HeaderText="Acciones">
                     <ItemTemplate>
                         <asp:Button ID="btnEditar" runat="server" Text="editar" CommandName="Editar" CommandArgument='<%#Eval("idLibro") %>'/>
-                        <asp:Button ID="btnEliminar" runat="server" Text="Eliminar" CommandName="Eliminar" CommandArgument='<%#Eval("idLibro") %>' />
+                        <asp:Button ID="btnEliminar" runat="server" Text="Eliminar" CommandName="Eliminar" CommandArgument='<%#Eval("idLibro") %>' OnClientClick="return confirm('¿Está seguro de eliminar este libro?');"/>
                     </ItemTemplate>
                 </asp:TemplateField>
             </Columns>
