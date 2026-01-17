@@ -26,5 +26,9 @@ namespace BibliotecaApp.Logica
         {
             return usuarioD.LoginAdmin(correo, contraseña);
         }
+        public List<ClUsuario> listarUsu ()
+        {
+            return usuarioD.listar_Usuarios();
+        }
     }
 }

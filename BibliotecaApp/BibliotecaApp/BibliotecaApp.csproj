@@ -102,6 +102,7 @@
     <Compile Include="Logica\ClLibroL.cs" />
     <Compile Include="Logica\ClUsuarioL.cs" />
     <Compile Include="Modelo\ClCategoria.cs" />
+    <Compile Include="Modelo\ClRol.cs" />
     <Compile Include="Modelo\ClUsuario.cs" />
     <Compile Include="Modelo\ClLibro.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

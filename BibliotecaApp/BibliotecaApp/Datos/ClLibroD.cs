@@ -12,7 +12,7 @@ namespace BibliotecaApp.Datos
     public class ClLibroD
     {
         ClConexion lb = new ClConexion();
-        //metodo para agregar un libro nuevo
+        //Metodo para agregar un libro nuevo
         public bool libro_Nuevo(ClLibro libro)
         {
             SqlCommand clb = new SqlCommand("insert into libros (titulo, autor, numeroDeSerie, cantidadDePaginas, idCategoria)" +

@@ -85,5 +85,40 @@ namespace BibliotecaApp.Datos
             cn.MtCerrarConexion();
             return OjbAdmin;
         }
+
+        //Metodo para traer todos los roles
+        public List<ClRol> trarRoles()
+        {
+            List<ClRol> roles = new List<ClRol>();
+
+            SqlCommand cmd = new SqlCommand("select ",cn.MtAbriConexion());
+        }
+
+
+        //Metodo para listar todos los usuarios
+        public List<ClUsuario> listar_Usuarios()
+        {
+            List<ClUsuario> listarUsuarios = new List<ClUsuario>();
+
+            SqlCommand cmd = new SqlCommand("select * from usuario",cn.MtAbriConexion());
+
+            SqlDataReader dr = cmd.ExecuteReader();
+
+            while (dr.Read())
+            {
+                listarUsuarios.Add(new ClUsuario
+                {
+                    idUsuario = Convert.ToInt32(dr["idUsuario"]),
+                    nombres = Convert.ToString(dr["nombres"]),
+                    apellidos = Convert.ToString(dr["apellidos"]),
+                    telefono = Convert.ToInt32(dr["telefono"]),
+                    correo = Convert.ToString(dr["correo"]),
+                    idRol = Convert.ToInt32(dr["idRol"])
+                });
+            }
+            dr.Close();
+            cn.MtCerrarConexion();
+            return listarUsuarios;
+        }
     }
 }

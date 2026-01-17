@@ -47,6 +47,8 @@ namespace BibliotecaApp.Vista
         {
             pnlAgregar.Visible = false;
             pnlListarLibros.Visible = false;
+            //usuarios
+            pnlListarUsuarios.Visible = false;
         }
 
         protected void btnListar_Click(object sender, EventArgs e)
@@ -121,7 +123,7 @@ namespace BibliotecaApp.Vista
 
                 ViewState["idLibro"] = null;
                 btnAgeragrN.Text = "Agregar libro";
-                limpiarCapos();
+                limpiarCaposLibros();
             }
             else
             {
@@ -172,7 +174,7 @@ namespace BibliotecaApp.Vista
             }
         }
 
-        void limpiarCapos()
+        void limpiarCaposLibros()
         {
             txtTitulo.Text = "";
             txtAutor.Text = "";
@@ -183,7 +185,30 @@ namespace BibliotecaApp.Vista
         protected void btnCerrarP_Click(object sender, EventArgs e)
         {
             pnlAgregar.Visible=false;
-            limpiarCapos();
+            limpiarCaposLibros();
+        }
+
+        
+        void cargarUsuario()
+        {
+            ClUsuario usuarioS = new ClUsuario();
+
+            if (usuarioS != null)
+            {
+                
+            }
+        }
+
+        protected void gvUsuarios_RowCommand(object sender, GridViewCommandEventArgs e)
+        {
+            int idUsuario = Convert.ToInt32(e.CommandArgument);
+
+            txtNombres.Text = idUsuario.ToString();
+        }
+
+        protected void btnAgregarU_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
