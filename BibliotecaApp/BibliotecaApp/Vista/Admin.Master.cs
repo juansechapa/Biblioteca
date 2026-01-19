@@ -16,7 +16,8 @@ namespace BibliotecaApp.Vista
 
         protected void btnVerUsuarios_Click(object sender, EventArgs e)
         {
-
+            Session["VerUsuarios"] = "usuarios";
+            Response.Redirect("Menu_Admin.aspx");
         }
         protected void btnOpcionesLibros_Click(object sender, EventArgs e)
         {

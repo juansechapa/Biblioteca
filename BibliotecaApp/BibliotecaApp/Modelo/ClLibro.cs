@@ -13,5 +13,7 @@ namespace BibliotecaApp.Modelo
         public int numeroDeSerie { get; set; }
         public int cantidadDePaginas { get; set; }
         public int idCategoria { get; set; }
+
+        public string categoria { get; set; }
     }
 }

@@ -51,12 +51,12 @@ namespace BibliotecaApp.Datos
             return lista;
         }
 
-        //Metodo para listar todos los libros
+        //Listar todos los libros
         public List<ClLibro> listar_libros()
         {
             List<ClLibro> listaLibros = new List<ClLibro>();
 
-            SqlCommand cli = new SqlCommand("select * from libros", lb.MtAbriConexion());
+            SqlCommand cli = new SqlCommand("SELECT \r\n    l.idLibro,\r\n    l.titulo,\r\n    l.autor,\r\n    l.numeroDeSerie,\r\n    l.cantidadDePaginas,\r\n    c.categoria\r\nFROM libros l\r\nINNER JOIN categoria c ON l.idCategoria = c.idCategoria\r\n", lb.MtAbriConexion());
 
             SqlDataReader lir = cli.ExecuteReader();
 
@@ -69,7 +69,7 @@ namespace BibliotecaApp.Datos
                     autor = Convert.ToString(lir["autor"]),
                     numeroDeSerie = Convert.ToInt32(lir["numeroDeSerie"]),
                     cantidadDePaginas = Convert.ToInt32(lir["cantidadDePaginas"]),
-                    idCategoria = Convert.ToInt32(lir["idCategoria"])
+                    categoria = lir["categoria"].ToString()
                 });
             }
             lir.Close();

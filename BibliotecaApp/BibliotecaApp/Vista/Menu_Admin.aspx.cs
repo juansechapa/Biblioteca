@@ -40,6 +40,16 @@ namespace BibliotecaApp.Vista
                 {
                     btnAgeragrN.Text = "Agregar libro";
                 }
+
+                if (Session["VerUsuarios"] != null)
+                {
+                    string usua = Session["VerUsuarios"].ToString();
+                    if (usua == "usuarios")
+                    {
+                        pnlInfoUsu.Visible = true;
+                    }
+                        
+                }
             }
         }
 
@@ -49,12 +59,14 @@ namespace BibliotecaApp.Vista
             pnlListarLibros.Visible = false;
             //usuarios
             pnlListarUsuarios.Visible = false;
+            pnlInfoUsu.Visible = false;
         }
 
         protected void btnListar_Click(object sender, EventArgs e)
         {
             pnlListarLibros.Visible = true;
             gvLibros.DataSource = libroL.ObtenerLibros();
+           
             gvLibros.DataBind();
         }
 
@@ -204,11 +216,14 @@ namespace BibliotecaApp.Vista
             int idUsuario = Convert.ToInt32(e.CommandArgument);
 
             txtNombres.Text = idUsuario.ToString();
+            txtApellidos.Text = idUsuario.ToString();
+            txtcorreo.Text = idUsuario.ToString();
+            txtRol.Text = idUsuario.ToString();
         }
 
         protected void btnAgregarU_Click(object sender, EventArgs e)
         {
-
+           
         }
     }
 }

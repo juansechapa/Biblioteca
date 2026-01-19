@@ -92,6 +92,19 @@ namespace BibliotecaApp.Datos
             List<ClRol> roles = new List<ClRol>();
 
             SqlCommand cmd = new SqlCommand("select ",cn.MtAbriConexion());
+
+            SqlDataReader drU = cmd.ExecuteReader();
+
+            while (drU.Read())
+            {
+                roles.Add(new ClRol{
+                    idRol = Convert.ToInt32(drU["idRol"]),
+                    rol = Convert.ToString(drU["rol"]),
+                });
+            }
+            drU.Close();
+            cn.MtCerrarConexion();
+            return roles;
         }
 
 

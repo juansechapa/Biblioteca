@@ -30,5 +30,11 @@ namespace BibliotecaApp.Logica
         {
             return usuarioD.listar_Usuarios();
         }
+
+        public List<ClRol> trarRol()
+        {
+            return usuarioD.trarRoles();
+        }
+
     }
 }
