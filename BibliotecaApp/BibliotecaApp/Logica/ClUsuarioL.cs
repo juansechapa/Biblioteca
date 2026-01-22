@@ -30,6 +30,10 @@ namespace BibliotecaApp.Logica
         {
             return usuarioD.listar_Usuarios();
         }
+        public ClUsuario traerUporId(int idUsuario)
+        {
+            return usuarioD.listarUporId(idUsuario);
+        }
 
         public List<ClRol> trarRol()
         {

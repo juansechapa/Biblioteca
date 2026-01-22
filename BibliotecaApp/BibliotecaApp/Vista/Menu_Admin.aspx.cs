@@ -14,6 +14,7 @@ namespace BibliotecaApp.Vista
     {
         ClLibroL categoriaL = new ClLibroL();
         ClLibroL libroL = new ClLibroL();
+        ClUsuarioL usuarioL = new ClUsuarioL();
 
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -34,7 +35,7 @@ namespace BibliotecaApp.Vista
                 ddlCategoria.DataBind();
                 if (ViewState["idLibro"] != null)
                 {
-                    btnAgeragrN.Text = "Guardar cambiod";
+                    btnAgeragrN.Text = "Guardar cambios";
                 }
                 else
                 {
@@ -46,7 +47,7 @@ namespace BibliotecaApp.Vista
                     string usua = Session["VerUsuarios"].ToString();
                     if (usua == "usuarios")
                     {
-                        pnlInfoUsu.Visible = true;
+                        pnlListarUsuarios.Visible = true;
                     }
                         
                 }
@@ -197,17 +198,21 @@ namespace BibliotecaApp.Vista
         protected void btnCerrarP_Click(object sender, EventArgs e)
         {
             pnlAgregar.Visible=false;
+           
             limpiarCaposLibros();
         }
 
         
-        void cargarUsuario()
+        void cargarUsuario(int idUsuario)
         {
-            ClUsuario usuarioS = new ClUsuario();
+            ClUsuario usuarioS = usuarioL.traerUporId(idUsuario);
 
             if (usuarioS != null)
             {
-                
+                txtNombres.Text = usuarioS.ToString();
+                txtApellidos.Text = usuarioS.ToString();
+                txtTelefono.Text = usuarioS.ToString();
+                txtcorreo.Text = usuarioS.ToString();
             }
         }
 
@@ -215,10 +220,10 @@ namespace BibliotecaApp.Vista
         {
             int idUsuario = Convert.ToInt32(e.CommandArgument);
 
-            txtNombres.Text = idUsuario.ToString();
-            txtApellidos.Text = idUsuario.ToString();
-            txtcorreo.Text = idUsuario.ToString();
-            txtRol.Text = idUsuario.ToString();
+            if (e.CommandName == "Editar")
+            {
+                cargarUsuario(idUsuario);
+            }
         }
 
         protected void btnAgregarU_Click(object sender, EventArgs e)

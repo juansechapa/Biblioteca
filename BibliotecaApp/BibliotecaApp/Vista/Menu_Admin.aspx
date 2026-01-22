@@ -55,6 +55,7 @@
             <div class="row justify-content-end">
                 <asp:TextBox ID="txtNombres" runat="server" CssClass="form-control"></asp:TextBox>
                 <asp:TextBox ID="txtApellidos" runat="server" CssClass="form-control"></asp:TextBox>
+                <asp:TextBox ID="txtTelefono" runat="server" CssClass="form-control"></asp:TextBox>
                 <asp:TextBox ID="txtcorreo" runat="server" CssClass="form-control"></asp:TextBox>
                 <asp:TextBox ID="txtRol" runat="server" CssClass="form-control"></asp:TextBox>
                 <asp:DropDownList ID="ddlRol" runat="server"></asp:DropDownList>
@@ -71,6 +72,7 @@
                 <asp:BoundField DataField="idUsuario" HeaderText="ID" />
                 <asp:BoundField DataField="nombres" HeaderText="Nombres" />
                 <asp:BoundField DataField="apellidos" HeaderText="Apellidos" />
+                <asp:BoundField DataField="telefono" HeaderText="telefono" />
                 <asp:BoundField DataField="correo" HeaderText="correo" />
                 <asp:BoundField DataField="idRol" HeaderText="Rol" />
                 <asp:TemplateField HeaderText="Acciones">

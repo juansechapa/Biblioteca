@@ -106,7 +106,7 @@ namespace BibliotecaApp.Datos
             return borrar > 0;
 
         }
-        //Metotodo para obtener libros por id
+        //Obtener libros por id
         public ClLibro ObtenerLibroPorId(int idLibro)
         {
             ClLibro libro = null;

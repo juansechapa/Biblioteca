@@ -108,7 +108,7 @@ namespace BibliotecaApp.Datos
         }
 
 
-        //Metodo para listar todos los usuarios
+        //Listar todos los usuarios
         public List<ClUsuario> listar_Usuarios()
         {
             List<ClUsuario> listarUsuarios = new List<ClUsuario>();
@@ -132,6 +132,34 @@ namespace BibliotecaApp.Datos
             dr.Close();
             cn.MtCerrarConexion();
             return listarUsuarios;
+        }
+
+        public ClUsuario listarUporId(int idUsuario)
+        {
+            ClUsuario usuario = null;
+
+            SqlCommand cmd = new SqlCommand("select idUsuario, nombres, apellidos, telefono, correo, idRol from usuario where idUsuario=@idUsuario", cn.MtAbriConexion());
+
+            cmd.Parameters.AddWithValue("@idUsuario", idUsuario);
+
+            SqlDataReader dr = cmd.ExecuteReader();
+
+            while (dr.Read())
+            {
+                usuario= new ClUsuario
+                {
+                    idUsuario = Convert.ToInt32(dr["idUsuario"]),
+                    nombres = dr["nombres"].ToString(),
+                    apellidos = dr["apellidos"].ToString(),
+                    telefono = Convert.ToInt32(dr["telefono"]),
+                    correo = dr["correo"].ToString(),
+                    idRol = Convert.ToInt32(dr["idRol"])
+                };
+            }
+            dr.Close();
+            cn.MtCerrarConexion();
+            return usuario;
+
         }
     }
 }
