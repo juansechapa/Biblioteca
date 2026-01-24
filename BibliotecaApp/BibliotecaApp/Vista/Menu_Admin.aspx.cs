@@ -21,14 +21,15 @@ namespace BibliotecaApp.Vista
            if (!IsPostBack)
             {
                 ocultar();
-                if (Session["VistaLibros"] != null)
-                {
-                    string opci = Session["VistaLibros"].ToString();
-                    if (opci == "Opciones")
-                    {
-                        pnlAgregar.Visible = true;
-                    }
-                }
+                //Averiguar para que demonios deje esto aca
+                //if (Session["VistaLibros"] != null)
+                //{
+                //    string opci = Session["VistaLibros"].ToString();
+                //    if (opci == "Opciones")
+                //    {
+                //        pnlAgregar.Visible = true;
+                //    }
+                //}
                 ddlCategoria.DataSource = categoriaL.ObtenerCategorias();
                 ddlCategoria.DataTextField = "categoria";
                 ddlCategoria.DataValueField = "idCategoria";
@@ -41,6 +42,10 @@ namespace BibliotecaApp.Vista
                 {
                     btnAgeragrN.Text = "Agregar libro";
                 }
+                ddlRol.DataSource = usuarioL.traerUporId();
+                ddlRol.DataTextField = "Rol";
+                ddlRol.DataValueField = "idRol";
+
 
                 if (Session["VerUsuarios"] != null)
                 {

@@ -3,15 +3,19 @@
   "WorkspaceRootPath": "C:\\Users\\Juan\\Documents\\BiblioGit\\BibliotecaApp\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{9FD4F750-97E0-45C2-A613-59C7B6A74A71}|BibliotecaApp\\BibliotecaApp.csproj|c:\\users\\juan\\documents\\bibliogit\\bibliotecaapp\\bibliotecaapp\\vista\\menu_admin.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{9FD4F750-97E0-45C2-A613-59C7B6A74A71}|BibliotecaApp\\BibliotecaApp.csproj|C:\\Users\\Juan\\Documents\\BiblioGit\\BibliotecaApp\\bibliotecaapp\\vista\\menu_admin.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{9FD4F750-97E0-45C2-A613-59C7B6A74A71}|BibliotecaApp\\BibliotecaApp.csproj|solutionrelative:bibliotecaapp\\vista\\menu_admin.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9FD4F750-97E0-45C2-A613-59C7B6A74A71}|BibliotecaApp\\BibliotecaApp.csproj|c:\\users\\juan\\documents\\bibliogit\\bibliotecaapp\\bibliotecaapp\\vista\\menu_admin.aspx.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9FD4F750-97E0-45C2-A613-59C7B6A74A71}|BibliotecaApp\\BibliotecaApp.csproj|solutionrelative:bibliotecaapp\\vista\\menu_admin.aspx.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{9FD4F750-97E0-45C2-A613-59C7B6A74A71}|BibliotecaApp\\BibliotecaApp.csproj|C:\\Users\\Juan\\Documents\\BiblioGit\\BibliotecaApp\\bibliotecaapp\\vista\\menu_admin.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
       "RelativeMoniker": "D:0:0:{9FD4F750-97E0-45C2-A613-59C7B6A74A71}|BibliotecaApp\\BibliotecaApp.csproj|solutionrelative:bibliotecaapp\\vista\\menu_admin.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9FD4F750-97E0-45C2-A613-59C7B6A74A71}|BibliotecaApp\\BibliotecaApp.csproj|C:\\Users\\Juan\\Documents\\BiblioGit\\BibliotecaApp\\bibliotecaapp\\vista\\admin.master.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{9FD4F750-97E0-45C2-A613-59C7B6A74A71}|BibliotecaApp\\BibliotecaApp.csproj|c:\\users\\juan\\documents\\bibliogit\\bibliotecaapp\\bibliotecaapp\\vista\\admin.master.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{9FD4F750-97E0-45C2-A613-59C7B6A74A71}|BibliotecaApp\\BibliotecaApp.csproj|solutionrelative:bibliotecaapp\\vista\\admin.master.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -66,7 +70,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Bookmark",
@@ -74,7 +78,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 1,
+              "Title": "Menu_Admin.aspx.designer.cs",
+              "DocumentMoniker": "C:\\Users\\Juan\\Documents\\BiblioGit\\BibliotecaApp\\BibliotecaApp\\Vista\\Menu_Admin.aspx.designer.cs",
+              "RelativeDocumentMoniker": "BibliotecaApp\\Vista\\Menu_Admin.aspx.designer.cs",
+              "ToolTip": "C:\\Users\\Juan\\Documents\\BiblioGit\\BibliotecaApp\\BibliotecaApp\\Vista\\Menu_Admin.aspx.designer.cs",
+              "RelativeToolTip": "BibliotecaApp\\Vista\\Menu_Admin.aspx.designer.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-23T23:41:37.584Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
               "Title": "ClConexion.cs",
               "DocumentMoniker": "C:\\Users\\Juan\\Documents\\BiblioGit\\BibliotecaApp\\BibliotecaApp\\Datos\\ClConexion.cs",
               "RelativeDocumentMoniker": "BibliotecaApp\\Datos\\ClConexion.cs",
@@ -92,14 +109,14 @@
               "RelativeDocumentMoniker": "BibliotecaApp\\Vista\\Menu_Admin.aspx.cs",
               "ToolTip": "C:\\Users\\Juan\\Documents\\BiblioGit\\BibliotecaApp\\BibliotecaApp\\Vista\\Menu_Admin.aspx.cs*",
               "RelativeToolTip": "BibliotecaApp\\Vista\\Menu_Admin.aspx.cs*",
-              "ViewState": "AgIAABIAAAAAAAAAAAAuwDAAAAAVAAAAAAAAAA==",
+              "ViewState": "AgIAACsAAAAAAAAAAAAQwD4AAAAwAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-01-16T23:39:03.925Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 6,
               "Title": "ClUsuarioL.cs",
               "DocumentMoniker": "C:\\Users\\Juan\\Documents\\BiblioGit\\BibliotecaApp\\BibliotecaApp\\Logica\\ClUsuarioL.cs",
               "RelativeDocumentMoniker": "BibliotecaApp\\Logica\\ClUsuarioL.cs",
@@ -107,12 +124,11 @@
               "RelativeToolTip": "BibliotecaApp\\Logica\\ClUsuarioL.cs",
               "ViewState": "AgIAABEAAAAAAAAAAAAAwCIAAAA0AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-16T23:35:17.523Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-01-16T23:35:17.523Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "Menu_Admin.aspx",
               "DocumentMoniker": "C:\\Users\\Juan\\Documents\\BiblioGit\\BibliotecaApp\\BibliotecaApp\\Vista\\Menu_Admin.aspx",
               "RelativeDocumentMoniker": "BibliotecaApp\\Vista\\Menu_Admin.aspx",
@@ -125,7 +141,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 8,
               "Title": "ClUsuarioD.cs",
               "DocumentMoniker": "C:\\Users\\Juan\\Documents\\BiblioGit\\BibliotecaApp\\BibliotecaApp\\Datos\\ClUsuarioD.cs",
               "RelativeDocumentMoniker": "BibliotecaApp\\Datos\\ClUsuarioD.cs",
@@ -133,12 +149,11 @@
               "RelativeToolTip": "BibliotecaApp\\Datos\\ClUsuarioD.cs",
               "ViewState": "AgIAAH4AAAAAAAAAAIAwwKAAAAAbAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-16T23:09:12.468Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-01-16T23:09:12.468Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "Menu.Master",
               "DocumentMoniker": "C:\\Users\\Juan\\Documents\\BiblioGit\\BibliotecaApp\\BibliotecaApp\\Vista\\Menu.Master",
               "RelativeDocumentMoniker": "BibliotecaApp\\Vista\\Menu.Master",
@@ -146,12 +161,11 @@
               "RelativeToolTip": "BibliotecaApp\\Vista\\Menu.Master",
               "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
-              "WhenOpened": "2026-01-18T23:54:34.851Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-01-18T23:54:34.851Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "Admin.Master",
               "DocumentMoniker": "C:\\Users\\Juan\\Documents\\BiblioGit\\BibliotecaApp\\BibliotecaApp\\Vista\\Admin.Master",
               "RelativeDocumentMoniker": "BibliotecaApp\\Vista\\Admin.Master",
@@ -164,20 +178,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "Admin.Master.cs",
               "DocumentMoniker": "C:\\Users\\Juan\\Documents\\BiblioGit\\BibliotecaApp\\BibliotecaApp\\Vista\\Admin.Master.cs",
               "RelativeDocumentMoniker": "BibliotecaApp\\Vista\\Admin.Master.cs",
               "ToolTip": "C:\\Users\\Juan\\Documents\\BiblioGit\\BibliotecaApp\\BibliotecaApp\\Vista\\Admin.Master.cs",
               "RelativeToolTip": "BibliotecaApp\\Vista\\Admin.Master.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAABIAAAAgAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-01-18T23:54:46.303Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 13,
               "Title": "ClRol.cs",
               "DocumentMoniker": "C:\\Users\\Juan\\Documents\\BiblioGit\\BibliotecaApp\\BibliotecaApp\\Modelo\\ClRol.cs",
               "RelativeDocumentMoniker": "BibliotecaApp\\Modelo\\ClRol.cs",
@@ -189,7 +203,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 9,
               "Title": "ClLibroD.cs",
               "DocumentMoniker": "C:\\Users\\Juan\\Documents\\BiblioGit\\BibliotecaApp\\BibliotecaApp\\Datos\\ClLibroD.cs",
               "RelativeDocumentMoniker": "BibliotecaApp\\Datos\\ClLibroD.cs",
@@ -197,12 +211,11 @@
               "RelativeToolTip": "BibliotecaApp\\Datos\\ClLibroD.cs",
               "ViewState": "AgIAAGYAAAAAAAAAAAAowG8AAAAhAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-14T17:14:27.77Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-01-14T17:14:27.77Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 7,
               "Title": "ClLibroL.cs",
               "DocumentMoniker": "C:\\Users\\Juan\\Documents\\BiblioGit\\BibliotecaApp\\BibliotecaApp\\Logica\\ClLibroL.cs",
               "RelativeDocumentMoniker": "BibliotecaApp\\Logica\\ClLibroL.cs",
@@ -210,12 +223,11 @@
               "RelativeToolTip": "BibliotecaApp\\Logica\\ClLibroL.cs",
               "ViewState": "AgIAABYAAAAAAAAAAAAQwBcAAAAHAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-16T23:36:29.455Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-01-16T23:36:29.455Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 10,
               "Title": "ClLibro.cs",
               "DocumentMoniker": "C:\\Users\\Juan\\Documents\\BiblioGit\\BibliotecaApp\\BibliotecaApp\\Modelo\\ClLibro.cs",
               "RelativeDocumentMoniker": "BibliotecaApp\\Modelo\\ClLibro.cs",
@@ -227,7 +239,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 12,
               "Title": "ClUsuario.cs",
               "DocumentMoniker": "C:\\Users\\Juan\\Documents\\BiblioGit\\BibliotecaApp\\BibliotecaApp\\Modelo\\ClUsuario.cs",
               "RelativeDocumentMoniker": "BibliotecaApp\\Modelo\\ClUsuario.cs",
@@ -239,7 +251,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 14,
               "Title": "Principal.aspx",
               "DocumentMoniker": "C:\\Users\\Juan\\Documents\\BiblioGit\\BibliotecaApp\\BibliotecaApp\\Vista\\Principal.aspx",
               "RelativeDocumentMoniker": "BibliotecaApp\\Vista\\Principal.aspx",
